@@ -1,4 +1,4 @@
-# ten random ints
+# make sound
 
 Write an application which iterates a container of objects calling a MakeSound() method for
 each. There should 3 objects in the container when it is iterated, an instance of three classes
