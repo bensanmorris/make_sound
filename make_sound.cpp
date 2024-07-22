@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
     animals.emplace_back(std::make_unique<Sheep>());
     animals.emplace_back(std::make_unique<Lion>());
 
-    for(auto& animal : animals)
+    for(const auto& animal : animals)
     {
         animal->MakeSound();
     }
