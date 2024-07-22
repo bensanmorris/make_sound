@@ -1,6 +1,6 @@
 #include <iostream>
+#include <array>
 #include <memory>
-#include <vector>
 
 class Animal
 {
@@ -53,10 +53,12 @@ public:
 };
 int main(int argc, char* argv[])
 {
-    std::vector<std::unique_ptr<Animal>> animals;
-    animals.emplace_back(std::make_unique<Dog>());
-    animals.emplace_back(std::make_unique<Sheep>());
-    animals.emplace_back(std::make_unique<Lion>());
+    std::array<std::unique_ptr<Animal>, 3> animals = 
+    {
+        std::make_unique<Dog>(),
+        std::make_unique<Sheep>(),
+        std::make_unique<Lion>()
+    };
 
     for(const auto& animal : animals)
     {
